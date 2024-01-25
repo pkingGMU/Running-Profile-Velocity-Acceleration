@@ -3,6 +3,7 @@
 ##Change in Time, Change in Position, Velocity, Time of Velocity, Change in Velocity over an interval, Acceleration, Time of Acceleration
 
 import csv
+import methods
 
 
 
@@ -24,14 +25,26 @@ def load_data(filename):
 #function I created and we pass the readable list through it
 new_list = load_data("Lab1.csv")
 
-print (new_list)
+#assigns each colums to the list instead of one large string
+for y in range(len(new_list)):
+    new_list[y] = str(new_list[y]).split(",")
 
-#scans through each row
-for row in new_list:
-    category = new_list[row][0]
-    distance = new_list[row][1]
-    time = new_list[row][2]
-    steps = new_list[row][3]
+#assigning data based on where it is in the table
+
+for x in range(len(new_list)):
+    category = new_list[x][0]
+    category = category.replace("['", "")
+    distance = float(new_list[x][1])
+    time = float(new_list[x][2])
+    steps = float(new_list[x][3])
+
+    #uses method from methods to do calculations
+    v = round(methods.velocity(distance, time), 2)
+
+    #prints each velocity
+    print (f"Velocity for {category} is: {v}")
+
+
 
 
     
