@@ -38,17 +38,20 @@ for x in range(len(new_list)):
     time = float(new_list[x][2])
     steps = float(new_list[x][3])
 
-    #uses method from methods to do calculations
+    #uses method.velocity from methods
     v = round(methods.velocity(distance, time), 2)
+
+
+    #uses method.stepLength from methods
+    sL = round(methods.stepLength(distance, steps), 2)
+
+
+    #uses method.stepRate from methods
+    sR = round(methods.stepRate(steps, time), 2)
 
     #prints each velocity
     print (f"Velocity for {category} is: {v}")
-
-
-
-
+    print (f"Step Length for {category} is: {sL}")
+    print (f"Step Rate for {category} is: {sR}")
     
-
-
-
-
+    #
