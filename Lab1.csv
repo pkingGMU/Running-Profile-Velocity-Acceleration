@@ -1,0 +1,5 @@
+﻿"Speed,Distance(m),Time (s),# of Steps,Velocity m/s,Step Length (m/step),Step Rate (steps/s),Velocity (m/s),,"
+"Slow,20,8.47,21,2.36,0.95,2.48,2.36,,"
+"Medium,20,6.35,19,3.15,1.05,2.99,3.15,,"
+"Fast,20,4.15,12,4.82,1.67,2.89,4.82,,"
+"Maximum,20,3.33,12,6.01,1.67,3.60,6.01,,"
